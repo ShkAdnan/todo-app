@@ -32,7 +32,7 @@ Route::post('/verify',   [AuthController::class, 'verifyAccount']);
 Route::group(['middleware' => 'JwtToken'], function()
 {
     //All the routes that belongs to the group goes here
-    Route::post('/logout', [AuthController::class, 'remove']);
+    Route::get('/logout', [AuthController::class, 'remove']);
 
     Route::group(['prefix' => 'todo'], function(){
         

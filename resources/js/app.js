@@ -13,6 +13,7 @@ import Edit from './component/updateTodo';
 import loginForm from './component/loginForm';
 import registerForm from './component/registerUser';
 import verify from './component/verificationCode';
+import logout from './component/logout';
 
 library.add(faPlusSquare, faTrash, faEye);
 
@@ -25,7 +26,8 @@ const routes = [
     {path : '/edit', component:Edit},
     {path : '/login', component:loginForm },
     {path : '/register', component:registerForm },
-    {path : '/verify', component:verify }
+    {path : '/verify', component:verify },
+    {path : '/logout', component:logout },
 ];
 
 const router = new vueRoute({
@@ -39,7 +41,8 @@ const app = new Vue({
         Edit,
         loginForm,
         registerForm,
-        verify
+        verify,
+        logout
     },
     el: '#app',
 });

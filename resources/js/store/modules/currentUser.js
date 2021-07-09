@@ -82,6 +82,13 @@ const actions   = {
                     commit('setError', ["Verification code entered is incorrect"]);
                 }
         });
+    },
+    logout(){
+        axios.get('/api/logout').then( response => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user_id');
+        }
+        );
     }
     
 };
